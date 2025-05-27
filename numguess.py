@@ -25,7 +25,13 @@ def game ():
             attempts +=1
             continue
         elif guess == rnum :
-            print(f"🎉 Correct! You guessed it in {attempts} attempts.")
+            print(f"🎉 Correct! ")
+            if attempts <=3:
+                print(f"Wow! You nailed it in just {attempts} tries! 🚀")
+            elif attempts >3 and attempts <=7:
+                print("Good job! That was a solid effort. 👏")
+            else:
+                print('You got there in the end! Patience pays off. 🐢')
             print()
             playagain = input("Would you like to play again? (y/n) : ")
             def plag():
